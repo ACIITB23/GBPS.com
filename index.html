@@ -40,7 +40,7 @@
 <body>
     <div id="contactDetails">
         <b><p style="font-size: 15px;">Managed by:</p></b>
-        <i><p style="font-size: 12px;">Dr. Amit Chaudhary and Mr. Anurag</p></i>
+        <i><p style="font-size: 12px;">Polymer simulation and device lab</p></i>
         <i><p style="font-size: 12px;">Department of Metallurgical Engineering & Materials Science</p></i>
         <i><p style="font-size: 12px;">Indian Institute of Technology Bombay</p></i>
         <i><p style="font-size: 12px;">
@@ -76,8 +76,11 @@
                 To optimize computational time and cost, we implemented several filters to remove redundant proteins. Redundancy refers to proteins that are irrelevant to our investigation, including those unrelated to glucose, mutations of the same proteins, proteins prepared in different experimental conditions, or homologous proteins.
             </p>
             <p>
-                Follow the article for more details about filtering methods. <i><b>(Makare et al., 2023)</b></i>    
+                Follow the article for more details about filtering methods. DOn't forget to cite this article <i><b>(Makare et al., 2024)</b></i>    
             </p>
+            <p>
+                <i><b>Note:</b></i> Author can also request for docking score and binding site residues of any proteins.   
+            </p>            
         </div>
 
         <input type="text" id="searchBox" placeholder="Search PDB IDs or Structure Titles">
@@ -1574,7 +1577,7 @@
                         var downloadCell = document.createElement("td");
                         var downloadLink = document.createElement("a");
                         downloadLink.textContent = "Download";
-                        downloadLink.href = "https://www.rcsb.org/structure/" + pdbId + "/download";
+                        downloadLink.href = "https://files.rcsb.org/download/" + pdbId + ".pdb"; // Construct direct download link
                         downloadLink.target = "_blank";
                         downloadCell.appendChild(downloadLink);
                         pdbRow.appendChild(downloadCell);
@@ -1596,7 +1599,9 @@
                     } else {
                         rows[i].style.display = "none";
                     }
-                }
+               
+
+ }
             }
 
             for (var i = 0; i < pdbIds.length; i++) {
@@ -1610,4 +1615,4 @@
             });
         </script>
     </body>
-    </html>
+</html>
